@@ -1,0 +1,105 @@
+record_wise:
+  enabled: false
+  partitioning:
+    Subject_000:
+      '22_11_14': training
+      '22_12_23': training
+      '23_01_20': validation
+      '23_01_21': test
+      '23_01_31': training
+    Subject_001:
+      '22_11_14': training
+    Subject_002:
+      '22_11_14': training
+      '23_01_20': validation
+    Subject_003:
+      '22_11_15': training
+    Subject_004:
+      '22_11_16': training
+    Subject_005:
+      '22_11_14': validation
+      '23_02_14': test
+    Subject_006:
+      '22_11_16': training
+    Subject_007:
+      '22_11_16': validation
+    Subject_008:
+      '22_11_16': training
+    Subject_009:
+      '22_11_16': training
+    Subject_010:
+      '22_11_16': training
+    Subject_011:
+      '22_11_17': training
+    Subject_012:
+      '22_11_18': training
+      '23_03_07': test
+    Subject_013:
+      '22_11_18': validation
+    Subject_014:
+      '22_11_18': training
+      '22_12_23': validation
+    Subject_015:
+      '22_11_22': validation
+      '23_02_14': training
+    Subject_016:
+      '23_01_12': test
+    Subject_017:
+      '23_01_12': training
+      '23_03_09': validation
+    Subject_018:
+      '23_01_13': training
+    Subject_019:
+      '23_01_26': training
+      '23_02_21': test
+      '23_03_30': training
+    Subject_020:
+      '23_01_27': training
+    Subject_021:
+      '23_02_15': training
+    Subject_022:
+      '23_02_20': validation
+    Subject_023:
+      '23_03_01': training
+    Subject_024:
+      '23_03_07': training
+    Subject_025:
+      '23_04_14': training
+
+segment_wise:
+  enabled: true
+  # NOTE: in this mode, segments are randomly assigned to sets, so
+  # partitioning is not to be manually defined - leave this as is:
+  partitioning:
+
+subject_wise:
+  enabled: false
+  partitioning:
+    Subject_000: training
+    Subject_001: training
+    Subject_002: training
+    Subject_008: training
+    Subject_009: training
+    Subject_010: training
+    Subject_011: training
+    Subject_012: training
+    Subject_015: training
+    Subject_016: training
+    Subject_017: training
+    Subject_018: training
+    Subject_019: training
+    Subject_023: training
+    Subject_024: training
+    Subject_025: training
+
+    Subject_003: validation
+    Subject_004: validation
+    Subject_005: validation
+    Subject_020: validation
+    Subject_021: validation
+    Subject_022: validation
+
+    Subject_006: test
+    Subject_007: test
+    Subject_013: test
+    Subject_014: test

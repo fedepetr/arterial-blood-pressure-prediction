@@ -1,0 +1,58 @@
+architecture:
+  activation_function: 'leaky_relu'
+  double_unet_variant: false
+  down_and_up_sampling_span: 2
+  n_filters_multiplication_factor: 2
+  multi_res_unet:
+    gru:
+      after_bottleneck: false
+      after_encoder: false
+      after_decoder: false
+      along_skip_connections: false
+    n_convolutional_layers_per_block: 2
+    n_convolutional_encoder_blocks: 4
+    n_filters_in_first_encoder_layer: 32
+    skip_connections: true
+  normalization:
+    inputs:
+    layers:
+      batch_norm: true
+  vanilla_unet:
+    gru:
+      after_bottleneck: false
+      after_encoder: false
+      after_decoder: false
+      along_skip_connections: false
+    multi_branch_encoder: false
+    n_convolutional_layers_per_block: 2
+    n_convolutional_encoder_blocks: 4
+    n_filters_in_first_encoder_layer: 32
+    skip_connections: true
+training:
+  l2_regularization_lambda: 0.01
+  learning_rate:
+    initial_value: 0.01
+    final_or_constant_value: 0.001
+    trend_enabled: false
+  mini_batch_size: 64
+  n_epochs: 2
+  optimizer:
+    adam:
+      enabled: true
+      parameters:
+        beta_1: 0.9
+        beta_2: 0.999
+        epsilon: 0.0000001
+        amsgrad: false
+        clipnorm: null
+        clipvalue: null
+        global_clipnorm: null
+    sgd:
+      enabled: false
+      parameters:
+        momentum: 0.0
+        nesterov: false
+        clipnorm: null
+        clipvalue: null
+        global_clipnorm: null
+
